@@ -3,6 +3,7 @@
 // Implementation of the abstract progress window form.
 //
 // 18-Jan-2018   Created.
+// 15-May-2018   Setting stage of the progress bar safely.
 //
 //////////////////////////////////////////////////////////////
 
@@ -58,6 +59,13 @@ abstract public class BaseProgressForm : BaseForm
     /// <param name="stage">The stage of the progress.</param>
     public void SetProgressStage( int stage )
     {
+        Invoke( new SettingProgressStageDelegate( SettingProgressStage ), stage );
+    }
+
+    /// <summary>Sets safely progress bar's range.</summary>
+    /// <param name="stage">The stage of the progress.</param>
+    private void SettingProgressStage( int stage )
+    {
         progressBar.Value = stage;
     }
 
@@ -65,6 +73,11 @@ abstract public class BaseProgressForm : BaseForm
     private BackgroundWorker progressWorker = new BackgroundWorker();
     /// <summary>Progress bar.</summary>
     private ProgressBar progressBar = new ProgressBar();
+
+    /// <summary>Setting progress stage delegate.</summary>
+    /// <param name="stage">The stage of the progress.</param>
+    private delegate void SettingProgressStageDelegate( int stage );
+
 }
 
 } // Forms
