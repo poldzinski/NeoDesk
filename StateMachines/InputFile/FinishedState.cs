@@ -13,7 +13,7 @@ namespace StateMachines
 namespace InputFile
 {
 
-public class FinishedState : InputFileBaseState
+class FinishedState : InputFileBaseState
 {
 
     /// <summary>Constructor.</summary>
@@ -23,6 +23,12 @@ public class FinishedState : InputFileBaseState
         // Nothing to do.
     }
 
+    /// <summary>Gets the ID of the state.</summary>
+    /// <returns>ID of the state.</returns>
+    override public StateId GetStateId()
+    {
+        return StateId.FINISHED_STATE;
+    }
 }
 
 } // namespace InputFile
