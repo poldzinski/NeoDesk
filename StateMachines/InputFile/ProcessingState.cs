@@ -1,6 +1,6 @@
 ﻿//////////////////////////////////////////////////////////////
 //
-// Created state of an input file state machine.
+// Processing state of an input file state machine.
 //
 // 15-May-2018   Created.
 //
