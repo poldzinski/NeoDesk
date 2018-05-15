@@ -69,6 +69,8 @@
     <Compile Include="Menus\Submenus\BaseSubmenu.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachines\InputFile\FinishedState.cs" />
+    <Compile Include="StateMachines\InputFile\ProcessingState.cs" />
     <Compile Include="StateMachines\InputFile\CreatedState.cs" />
     <Compile Include="StateMachines\InputFile\InputFileStateMachine.cs" />
     <Compile Include="StateMachines\InputFile\InputFileBaseState.cs" />
