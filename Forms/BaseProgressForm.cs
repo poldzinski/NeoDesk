@@ -44,7 +44,7 @@ abstract public class BaseProgressForm : BaseForm
     }
 
     /// <summary>The start of the work.</summary>
-    abstract public void WorkerThread();
+    abstract protected void WorkerThread();
 
     /// <summary>Sets progress bar's range.</summary>
     /// <param name="start">The start value.</param>
