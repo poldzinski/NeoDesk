@@ -3,6 +3,7 @@
 // Created state of an input file state machine.
 //
 // 22-Jan-2018   Created.
+// 15-May-2018   Removing the class from public access.
 //
 //////////////////////////////////////////////////////////////
 
@@ -13,7 +14,7 @@ namespace StateMachines
 namespace InputFile
 {
 
-public class CreatedState : InputFileBaseState
+class CreatedState : InputFileBaseState
 {
 
     /// <summary>Constructor.</summary>
@@ -21,6 +22,13 @@ public class CreatedState : InputFileBaseState
     public CreatedState( BaseStateMachine parentStateMachine ) : base( parentStateMachine )
     {
         // Nothing to do.
+    }
+
+    /// <summary>Gets the ID of the state.</summary>
+    /// <returns>ID of the state.</returns>
+    override public StateId GetStateId()
+    {
+        return StateId.CREATED_STATE;
     }
 
 }
