@@ -5,6 +5,7 @@
 // 16-Jan-2018   Created.
 // 18-Jan-2018   Derive from BaseProgressForm.
 // 15-May-2018   Assembling the progress bar with the file state machine.
+//               Unneeded public method changed to protected.
 //
 //////////////////////////////////////////////////////////////
 
@@ -36,7 +37,7 @@ public class TransferWindowForm : BaseProgressForm
     }
 
     /// <summary>The start of the work.</summary>
-    override public void WorkerThread()
+    override protected void WorkerThread()
     {
         while ( m_InputFileStateMachine.ProcessInput() )
         {
