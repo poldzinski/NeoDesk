@@ -3,6 +3,7 @@
 // Interface of a input file machine's state.
 //
 // 22-Jan-2018   Created.
+// 15-May-2018   Exception added as the default processing result.
 //
 //////////////////////////////////////////////////////////////
 
@@ -23,14 +24,16 @@ public abstract class InputFileBaseState : BaseState
         // Nothing to do.
     }
     
-    /// <summary>Processes input as a string.</summary>
-    /// <param name="input">String input.</param>
+    /// <summary>Processes next input value.</summary>
+    /// <param name="input">Input to be processed.</param>
     /// <returns>Result of the operation.</returns>
-    public bool ProcessInput( string input )
+    virtual public bool ProcessInput( string input )
     {
-        return false;
+        throw new System.Exception( m_ExceptionDescription );
     }
 
+    /// <summary>Description.</summary>
+    private const string m_ExceptionDescription = "Invalid state of InputFileBaseState while processing.";
 }
 
 } // namespace InputFile
