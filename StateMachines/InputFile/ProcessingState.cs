@@ -13,7 +13,7 @@ namespace StateMachines
 namespace InputFile
 {
 
-public class ProcessingState : InputFileBaseState
+class ProcessingState : InputFileBaseState
 {
 
     /// <summary>Constructor.</summary>
@@ -21,6 +21,13 @@ public class ProcessingState : InputFileBaseState
     public ProcessingState( BaseStateMachine parentStateMachine ) : base( parentStateMachine )
     {
         // Nothing to do.
+    }
+
+    /// <summary>Gets the ID of the state.</summary>
+    /// <returns>ID of the state.</returns>
+    override public StateId GetStateId()
+    {
+        return StateId.PROCESSING_STATE;
     }
 
     /// <summary>Processes next input value.</summary>
