@@ -57,6 +57,7 @@
     <Compile Include="Forms\MainFormTests.cs" />
     <Compile Include="Forms\TransferWindowFormTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachines\InputFile\InputFileTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NeoDesk.csproj">
@@ -69,6 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menus\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Forms\TestInputFile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
