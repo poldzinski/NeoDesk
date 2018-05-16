@@ -14,7 +14,7 @@ namespace StateMachines
 namespace InputFile
 {
 
-public abstract class InputFileBaseState : BaseState
+abstract class InputFileBaseState : BaseState
 {
 
     /// <summary>Constructor.</summary>
