@@ -24,7 +24,7 @@ public class InputFileStateMachine : BaseStateMachine
     {
         m_Created = new CreatedState( this );
         m_Processing = new ProcessingState( this );
-        m_Finished = new ProcessingState( this );
+        m_Finished = new FinishedState( this );
 
         AddState( m_Created );
         AddState( m_Processing );
