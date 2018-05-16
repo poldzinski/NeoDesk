@@ -4,6 +4,7 @@
 //
 // 18-Jan-2018   Created.
 // 15-May-2018   Setting stage of the progress bar safely.
+//               Unneeded public method changed to protected.
 //
 //////////////////////////////////////////////////////////////
 
