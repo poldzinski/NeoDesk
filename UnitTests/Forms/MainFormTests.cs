@@ -1,4 +1,12 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿//////////////////////////////////////////////////////////////
+//
+// Unit tests within MainForm.
+//
+// 15-May-2018   Created.
+//
+//////////////////////////////////////////////////////////////
+
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Windows.Forms;
 
 using NeoDesk.Forms.Main;
@@ -19,7 +27,6 @@ public class MainFormTests
         Assert.IsNotNull( mainForm );
         Assert.IsNotNull( mainForm.Menu );
     }
-
 }
 
 }
