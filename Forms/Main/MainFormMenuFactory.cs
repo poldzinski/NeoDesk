@@ -3,11 +3,15 @@
 // Implementation of the main form's main menu factory.
 //
 //  8-Jan-2018   Created.
+// 16-May-2018   Tools submenu added.
 //
 //////////////////////////////////////////////////////////////
 
 using System.Collections.Generic;
 using System.Windows.Forms;
+
+using NeoDesk.Menus.MenuItems;
+using NeoDesk.Menus.Submenus;
 
 namespace NeoDesk
 {
@@ -29,12 +33,16 @@ class MainFormMenuFactory : Menus.MenuFactory
         m_ExitMenuItem.GetMenuItem().Click += ( sender, eventArguments ) => Application.Exit();
 
         m_Submenus.Add( m_EditSubmenu );
+
+        m_Submenus.Add( m_ToolsSubmenu );
+        m_ToolsSubmenu.AddMenuItem( m_OptionsMenuItem );
     }
 
     /// <summary>Opens a dialog window to point a file.</summary>
     private void OpenFileChosen( object sender, System.EventArgs eventArguments )
     {
-        string fileName = m_OpenFileMenuItem.GetFileName();
+        OpenFileMenuItem menuItem = m_OpenFileMenuItem as OpenFileMenuItem;
+        string fileName = menuItem.GetFileName();
 
         if ( fileName.Length > 0U )
         {
@@ -45,13 +53,17 @@ class MainFormMenuFactory : Menus.MenuFactory
     }
 
     /// <summary>The 'File' submenu.</summary>
-    private Menus.Submenus.FileSubmenu m_FileSubmenu = new Menus.Submenus.FileSubmenu();
+    private BaseSubmenu m_FileSubmenu = new FileSubmenu();
     /// <summary>The 'Open file...' menu item.</summary>
-    private Menus.MenuItems.OpenFileMenuItem m_OpenFileMenuItem = new Menus.MenuItems.OpenFileMenuItem();
+    private BaseMenuItem m_OpenFileMenuItem = new OpenFileMenuItem();
     /// <summary>The 'Exit' menu item.</summary>
-    private Menus.MenuItems.ExitMenuItem m_ExitMenuItem = new Menus.MenuItems.ExitMenuItem();
+    private BaseMenuItem m_ExitMenuItem = new ExitMenuItem();
     /// <summary>The 'Edit' submenu.</summary>
-    private Menus.Submenus.EditSubmenu m_EditSubmenu = new Menus.Submenus.EditSubmenu();
+    private BaseSubmenu m_EditSubmenu = new EditSubmenu();
+    /// <summary>The 'Tools' submenu.</summary>
+    private BaseSubmenu m_ToolsSubmenu = new ToolsSubmenu();
+    /// <summary>The 'Options' menu item.</summary>
+    private BaseMenuItem m_OptionsMenuItem = new OptionsMenuItem();
 }
 
 } // Main
