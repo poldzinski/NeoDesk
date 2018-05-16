@@ -3,6 +3,7 @@
 // Finished state of an input file state machine.
 //
 // 15-May-2018   Created.
+//               Removing the class from public access.
 //
 //////////////////////////////////////////////////////////////
 
