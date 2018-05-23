@@ -30,8 +30,8 @@ public class TransferWindowForm : BaseProgressForm
     /// <param name="fileName">The name of a file.</param>
     public void ProcessFile( string fileName )
     {
-        m_InputFileStateMachine = new StateMachines.InputFile.InputFileStateMachine( fileName );
-        SetProgressRange( 0, m_InputFileStateMachine.GetLinesCount() );
+        m_ProjectFileStateMachineImpl = new ProjectFileStateMachineImpl( fileName );
+        SetProgressRange( 0, m_ProjectFileStateMachineImpl.GetLinesCount() );
 
         Start();
     }
@@ -39,9 +39,9 @@ public class TransferWindowForm : BaseProgressForm
     /// <summary>The start of the work.</summary>
     override protected void WorkerThread()
     {
-        while ( m_InputFileStateMachine.ProcessInput() )
+        while ( m_ProjectFileStateMachineImpl.ProcessInput() )
         {
-            SetProgressStage( m_InputFileStateMachine.GetCurrentLine() );
+            SetProgressStage( m_ProjectFileStateMachineImpl.GetCurrentLine() );
         }
     }
 
@@ -54,7 +54,7 @@ public class TransferWindowForm : BaseProgressForm
     /// <summary>Transfer window form's caption./// </summary>
     private const string m_TransferWindowFormCaption = "Transfer window";
     /// <summary>State machine to process an input file.</summary>
-    private StateMachines.InputFile.InputFileStateMachine m_InputFileStateMachine;
+    private ProjectFileStateMachineImpl m_ProjectFileStateMachineImpl;
 }
 
 } // TransferWindow
