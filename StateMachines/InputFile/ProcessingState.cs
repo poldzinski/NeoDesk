@@ -35,7 +35,7 @@ class ProcessingState : InputFileBaseState
     /// <returns>Result of the operation.</returns>
     override public bool ProcessInput( string input )
     {
-        System.Threading.Thread.Sleep( 1000 );
+        System.Threading.Thread.Sleep( 10 );
         return true;
     }
 
