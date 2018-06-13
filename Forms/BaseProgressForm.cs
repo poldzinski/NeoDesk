@@ -68,6 +68,7 @@ abstract public class BaseProgressForm : BaseForm
     private void SettingProgressStage( int stage )
     {
         progressBar.Value = stage;
+        progressBar.Refresh();
     }
 
     /// <summary>Background worker for the process of progress.</summary>
