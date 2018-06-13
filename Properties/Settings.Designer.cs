@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace NeoDesk.Properties {
+namespace Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,12 +26,24 @@ namespace NeoDesk.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("127.0.0.1")]
-        public string client_ip {
+        public string server_ip {
             get {
-                return ((string)(this["client_ip"]));
+                return ((string)(this["server_ip"]));
             }
             set {
-                this["client_ip"] = value;
+                this["server_ip"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("300")]
+        public string server_port {
+            get {
+                return ((string)(this["server_port"]));
+            }
+            set {
+                this["server_port"] = value;
             }
         }
     }

@@ -1,9 +1,12 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
-<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="NeoDesk.Properties" GeneratedClassName="Settings">
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="client_ip" Type="System.String" Scope="User">
+    <Setting Name="server_ip" Type="System.String" Scope="User">
       <Value Profile="(Default)">127.0.0.1</Value>
+    </Setting>
+    <Setting Name="server_port" Type="System.String" Scope="User">
+      <Value Profile="(Default)">300</Value>
     </Setting>
   </Settings>
 </SettingsFile>
