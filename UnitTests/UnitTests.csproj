@@ -56,6 +56,7 @@
   <ItemGroup>
     <Compile Include="Forms\MainFormTests.cs" />
     <Compile Include="Forms\TransferWindowFormTests.cs" />
+    <Compile Include="Network\TcpNetworkTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -63,9 +64,6 @@
       <Project>{A4B58145-C2B4-465C-AA80-1AA4751C183F}</Project>
       <Name>NeoDesk</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Menus\" />
